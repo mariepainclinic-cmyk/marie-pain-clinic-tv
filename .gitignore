@@ -1,0 +1,29 @@
+# 대용량 파일 제외
+*.psd
+*.pptx
+*.xlsx
+*.jsx
+desktop.ini
+
+# 이전 버전 HTML
+마리통증의학과_TV.html
+마리통증의학과_TV_TBWA.html
+마리통증의학과_TV_WK.html
+마리통증의학과_TV_v2.html
+마리통증의학과_TV_v3.html
+마리통증의학과_TV_샘플.html
+마리통증의학과_TV_전체.html
+
+# 기획 문서
+*.md
+추출_콘텐츠/
+
+# 미사용 이미지 (사용하는 것만 개별 add)
+슬라이드_이미지/
+추가_이미지/
+
+# 기타
+*.png~
+*.jpg~
+21200458_0066_2 (1).png
+.claude/
