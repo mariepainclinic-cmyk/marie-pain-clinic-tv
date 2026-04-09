@@ -34,7 +34,9 @@ html, body {
   font-family:'Pretendard',-apple-system,sans-serif;
   color:var(--white);
   -webkit-font-smoothing:antialiased;
+  cursor:none;
 }
+*, *::before, *::after { cursor:none !important; }
 
 #stage {
   width:3840px; height:2160px;
@@ -1024,12 +1026,14 @@ function runCountUp(slide){
 
 show(0);
 
-/* ═══ 자동 전체화면 시도 ═══ */
-(function(){
-  var el = document.documentElement;
-  var rfs = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
-  if(rfs) try { rfs.call(el); } catch(e){}
-})();
+/* ═══ 클릭 시 전체화면 + 커서 숨김 ═══ */
+document.addEventListener('click', function(){
+  if(!document.fullscreenElement && !document.webkitFullscreenElement){
+    var el = document.documentElement;
+    var rfs = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+    if(rfs) try { rfs.call(el); } catch(e){}
+  }
+});
 </script>
 </body>
 </html>
