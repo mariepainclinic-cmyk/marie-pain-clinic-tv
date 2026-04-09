@@ -1024,21 +1024,11 @@ function runCountUp(slide){
 
 show(0);
 
-/* ═══ 전체화면 ═══ */
+/* ═══ 자동 전체화면 시도 ═══ */
 (function(){
-  var overlay = document.createElement('div');
-  overlay.id = 'fs-overlay';
-  overlay.innerHTML = '<div style="font-size:64px;color:#fff;text-align:center;padding-top:40vh;font-family:Pretendard,sans-serif;cursor:pointer"><div style="font-size:120px;margin-bottom:40px">▶</div>화면을 터치하면 전체화면으로 시작합니다</div>';
-  overlay.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.95);cursor:pointer';
-  document.body.appendChild(overlay);
-  overlay.addEventListener('click', function(){
-    var el = document.documentElement;
-    var rfs = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
-    if(rfs) rfs.call(el);
-    overlay.remove();
-  });
-  /* F11이나 이미 전체화면이면 오버레이 제거 */
-  document.addEventListener('fullscreenchange', function(){ if(document.fullscreenElement) { var o=document.getElementById('fs-overlay'); if(o) o.remove(); }});
+  var el = document.documentElement;
+  var rfs = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+  if(rfs) try { rfs.call(el); } catch(e){}
 })();
 </script>
 </body>
