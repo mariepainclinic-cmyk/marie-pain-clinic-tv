@@ -34,9 +34,8 @@ html, body {
   font-family:'Pretendard',-apple-system,sans-serif;
   color:var(--white);
   -webkit-font-smoothing:antialiased;
-  cursor:none;
 }
-*, *::before, *::after { cursor:none !important; }
+body.hide-cursor, body.hide-cursor * { cursor:none !important; }
 
 #stage {
   width:3840px; height:2160px;
@@ -1026,7 +1025,7 @@ function runCountUp(slide){
 
 show(0);
 
-/* ═══ 클릭 시 전체화면 + 커서 숨김 ═══ */
+/* ═══ 클릭 시 전체화면 ═══ */
 document.addEventListener('click', function(){
   if(!document.fullscreenElement && !document.webkitFullscreenElement){
     var el = document.documentElement;
@@ -1034,6 +1033,16 @@ document.addEventListener('click', function(){
     if(rfs) try { rfs.call(el); } catch(e){}
   }
 });
+/* ═══ 커서 3초 후 숨김 ═══ */
+(function(){
+  var timer;
+  document.body.classList.add('hide-cursor');
+  document.addEventListener('mousemove', function(){
+    document.body.classList.remove('hide-cursor');
+    clearTimeout(timer);
+    timer = setTimeout(function(){ document.body.classList.add('hide-cursor'); }, 3000);
+  });
+})();
 </script>
 </body>
 </html>
