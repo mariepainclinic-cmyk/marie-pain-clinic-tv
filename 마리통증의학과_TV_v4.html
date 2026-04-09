@@ -259,35 +259,35 @@ html, body {
   display:flex; flex-direction:column; justify-content:center;
 }
 .s-dual .dual-info.info-l {
-  left:0; padding:0 20px 120px 140px; text-align:right; align-items:flex-end;
+  left:0; padding:0 20px 120px 140px; text-align:left; align-items:flex-start;
 }
 .s-dual .dual-info.info-r {
-  right:0; padding:0 140px 120px 20px; text-align:left; align-items:flex-start;
+  right:0; padding:0 140px 120px 20px; text-align:right; align-items:flex-end;
 }
 .s-dual .dual-info .doc-badge {
-  font-size:34px; letter-spacing:10px; color:var(--gold);
-  font-weight:300; text-transform:uppercase; margin-bottom:36px;
+  font-size:44px; letter-spacing:12px; color:var(--gold);
+  font-weight:300; text-transform:uppercase; margin-bottom:44px;
 }
 .s-dual .dual-info .doc-quote {
-  font-size:68px; font-weight:200; line-height:1.45;
-  margin-bottom:44px;
+  font-size:88px; font-weight:200; line-height:1.4;
+  margin-bottom:52px;
 }
 .s-dual .dual-info .doc-quote em { font-style:normal; color:var(--gold); font-weight:400; }
-.s-dual .dual-info .doc-gline { width:80px; height:3px; background:var(--gold); margin-bottom:36px; }
-.s-dual .dual-info .doc-name { font-size:60px; font-weight:700; margin-bottom:14px; }
-.s-dual .dual-info .doc-name small { font-weight:300; font-size:44px; margin-left:8px; color:var(--w60); }
-.s-dual .dual-info .doc-creds { font-size:36px; font-weight:300; color:var(--w60); line-height:1.8; }
+.s-dual .dual-info .doc-gline { width:80px; height:3px; background:var(--gold); margin-bottom:44px; }
+.s-dual .dual-info .doc-name { font-size:80px; font-weight:700; margin-bottom:18px; }
+.s-dual .dual-info .doc-name small { font-weight:300; font-size:56px; margin-left:10px; color:var(--w60); }
+.s-dual .dual-info .doc-creds { font-size:48px; font-weight:300; color:var(--w60); line-height:1.8; }
 /* 상단 중앙 타이틀 */
 .s-dual .dual-top {
   position:absolute; top:140px; left:0; right:0; z-index:6;
   text-align:center;
 }
 .s-dual .dual-top .top-badge {
-  font-size:30px; letter-spacing:14px; color:var(--gold);
-  font-weight:300; text-transform:uppercase; margin-bottom:24px;
+  font-size:46px; letter-spacing:16px; color:var(--gold);
+  font-weight:300; text-transform:uppercase; margin-bottom:32px;
 }
 .s-dual .dual-top .top-title {
-  font-size:64px; font-weight:200; color:var(--w90);
+  font-size:110px; font-weight:200; color:var(--w90);
 }
 
 /* ═══════════════════════════════════════════════════
@@ -591,13 +591,13 @@ html, body {
   <div class="kicker rv rv-1">개원 7년 · 통증전문의 2인 누적</div>
   <div class="nums rv rv-2">
     <div class="n-block">
-      <div class="big"><span class="count-up" data-target="33000">0</span><span class="u">건+</span></div>
+      <div class="big"><span class="count-up" data-target="42000">0</span><span class="u">건+</span></div>
       <div class="n-label">C-ARM 정밀 시술</div>
     </div>
     <div class="sep"></div>
     <div class="n-block">
-      <div class="big"><span class="count-up" data-target="63000">0</span><span class="u">건+</span></div>
-      <div class="n-label">총 주사 시술</div>
+      <div class="big"><span class="count-up" data-target="90000">0</span><span class="u">건+</span></div>
+      <div class="n-label">총 시술 건수</div>
     </div>
   </div>
   <div class="sub rv rv-3">신경차단 · 관절 · 재생 · 통증 전 영역</div>
@@ -635,7 +635,7 @@ html, body {
   </div>
   <!-- 우측: 조소연 정보 -->
   <div class="dual-info info-r">
-    <div class="doc-badge rv rv-1">통증전문의</div>
+    <div class="doc-badge rv rv-1">여성전문의</div>
     <div class="doc-quote rv rv-2">
       "두려움을 없애는 것도<br><em>치료의 일부</em>입니다"
     </div>
@@ -718,8 +718,8 @@ html, body {
 <div class="slide s-tx" style="background:var(--dark)">
   <div class="bg-wrap"><div class="kb" style="position:absolute;inset:0;background:url('슬라이드_이미지/사진/PRP_재생치료.png') 20% center / 180% auto no-repeat"></div><div class="bg-overlay from-left"></div></div>
   <div class="content">
-    <div class="rv rv-1"><span class="pill gold">인대강화 · PRP</span></div>
-    <div class="title rv rv-2">닳은 인대,<br><b>수술 전에</b> 시도할 게<br>있습니다</div>
+    <div class="rv rv-1"><span class="pill gold">재생치료 · PRP</span></div>
+    <div class="title rv rv-2">인대 · 힘줄 · 관절,<br><b>수술 전에</b> 시도할 게<br>있습니다</div>
     <div class="price-line rv rv-3">인대강화 50,000~70,000원 · PRP 200,000원</div>
   </div>
 </div>
@@ -833,7 +833,7 @@ html, body {
   <div class="content" style="width:50%; padding:0 120px 0 200px;">
     <div class="badge rv rv-1" style="color:var(--teal);">오신 김에 같이 확인하세요</div>
     <div class="rv rv-2"><span class="pill teal">골밀도 검사</span></div>
-    <div class="title rv rv-3" style="font-size:130px; color:#2C3240;">50세 이상,<br>통증 치료 오신 김에<br><b>뼈 건강도 확인하세요</b></div>
+    <div class="title rv rv-3" style="font-size:140px; color:#2C3240;">50세 이상,<br>통증 치료 오신 김에<br><b>뼈 건강도 확인하세요</b></div>
     <div class="body rv rv-4" style="color:rgba(44,50,60,0.55);">
       골다공증은 증상 없이 진행됩니다.<br>
       특히 스테로이드 치료 중이라면 정기 검사를 권합니다.
